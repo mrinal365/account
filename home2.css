@@ -1,0 +1,65 @@
+body{
+    margin:0;
+    padding:0;
+    
+}
+
+.nav-bar{
+    height:15vh;
+    width:100%;
+    background: linear-gradient(117.86deg, #83B5E7 8.97%, rgba(27, 98, 183, 0.72) 41.77%, rgba(0, 59, 172, 0.69) 68.9%, rgba(13, 53, 131, 0.71) 89.28%);
+    background: white;
+    box-shadow:inset 1px 1px 15rpx #111111;
+}
+.lower-part{
+    height:80vh;
+    width: 100%;
+        background: linear-gradient(117.86deg, #83B5E7 8.97%, rgba(27, 98, 183, 0.72) 41.77%, rgba(0, 59, 172, 0.69) 68.9%, rgba(13, 53, 131, 0.71) 89.28%);
+
+}
+.button-getloc{
+    height:10%;
+    
+    border-radius: 100px;
+    background: #4788C7;
+    width:40%;
+    margin:35% 30% 0% 30%;
+    border:2px solid white;
+
+}
+.button-getloc:hover{
+    background: white;
+    border:1px solid black;
+}
+.help-pic{
+    height:100%;s
+    width:40%;
+    background:url(logo-makri.png);
+    background-size: cover;
+    background-position: center;
+    margin: 2% 30% ;
+}
+.help-makri{
+    
+}
+.intro-location{
+    height:20vh;
+    width:100%;
+    text-align: center;
+    font-family: karla;
+}
+.help-makri-text{
+    color:white;
+    padding: 10% 0 0 0;
+}
+.help-makri-text-1{
+    color:white;
+}
+.pic-loc{
+    height:20vh;
+    width:20vh;
+    margin:0 40%;
+    background: url(icons8-comet-100.png);
+    background-size: cover;
+    background-position: center;
+}

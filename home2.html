@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <!-- <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+     -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="jquery-2.1.4.js"></script>
+    <link rel="stylesheet" type="text/css" href="home2.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+  </head>
+  <body>
+      
+      <div class="nav-bar" id="navbar">
+         <div class="help-pic">
+
+        </div>
+      </div>
+
+      <div class="lower-part" id="wrapper">
+        <div class="help-makri">
+            
+            <div class="intro-location">
+                <p class="help-makri-text">
+                    Help makri reach out your near one's
+                </p>
+                <p class="help-makri-text-1">
+                    by allowing your location
+                </p>
+                <div class="pic-loc"></div>
+            </div>
+        </div>
+        <button class="button-getloc" id="location-button">
+            Get User Location
+        </button>
+        
+
+        <div id="output">
+        </div>
+
+      </div>
+
+  <!-- <div>
+      <form action="POST">
+
+      </form>
+  </div> -->
+  
+  <script>
+          $('#location-button').click(function(){
+        
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position){
+                    console.log(position);
+                  //$.get( "http://maps.googleapis.com/maps/api/geocode/json?latlng="+ position.coords.latitude + "," + position.coords.longitude +"&sensor=false", function(data) {
+                   // console.log(data);
+                  //})
+                  //var img = new Image();
+                  //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=800x400&sensor=false";
+                  //$('#output').html(img);
+                //});
+                    //var objPosition = jQuery.parseJSON(position)
+                    // var objPosition = JSON.parse(position)
+
+                    var crd = position.coords;
+
+                    //var latitude = objPosition['latitude']
+                    //var longitude = objPosition['longitude']
+                    // var latitude = position['latitude']
+                    // var longitude = position['longitude']
+                    var distance = 0.5 // default
+                    
+                    var GETString = "?latitude="+crd.latitude+"&longitude="+crd.longitude+"&distance="+distance;
+
+                    console.log(crd.latitude)
+                    console.log(crd.longitude)
+                    console.log(distance)
+                   // console.log(objPosition)
+                    location.href = GETString;
+                
+            });
+            }
+          });
+  </script>
+  </body>
+</html>
